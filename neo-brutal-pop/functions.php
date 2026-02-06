@@ -11,6 +11,9 @@ function neo_brutal_pop_scripts() {
 
     // Enqueue main style (Block themes usually auto-enqueue style.css, but explicit is fine to ensure order)
     wp_enqueue_style( 'neo-brutal-pop-style', get_stylesheet_uri(), array(), '1.1.0' );
+
+    // Enqueue theme script for interactive elements
+    wp_enqueue_script( 'neo-brutal-pop-script', get_template_directory_uri() . '/assets/js/theme.js', array(), '1.1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'neo_brutal_pop_scripts' );
 
